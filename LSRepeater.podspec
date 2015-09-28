@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "LSRepeater"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Executes a block of code repeatedly"
 
   s.description  = <<-DESC
@@ -27,8 +27,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "git@github.com:LondonSwift/LSRepeater.git", :tag => "0.0.1" }
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.source       = { :git => "https://github.com/LondonSwift/LSRepeater.git", :tag => "0.0.2" }
+  s.source_files  = "Classes", "*/*.{swift}"
   s.exclude_files = "Classes/Exclude"
   # s.public_header_files = "Classes/**/*.h"
 end
