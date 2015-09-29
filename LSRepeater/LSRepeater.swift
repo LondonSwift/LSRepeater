@@ -11,12 +11,12 @@ import Foundation
 public typealias LSRepeatClosure = () -> Void
 
 // we need to subclass NSObject, as NSTimer uses the runtime for method invocation
-class LSRepeater: NSObject {
+public class LSRepeater: NSObject {
     
     var timer:NSTimer!
     var execute:LSRepeatClosure!
     
-    class func repeater(interval:NSTimeInterval, execute: LSRepeatClosure) -> LSRepeater {
+    public class func repeater(interval:NSTimeInterval, execute: LSRepeatClosure) -> LSRepeater {
         
         let repeater = LSRepeater()
         repeater.execute = execute
