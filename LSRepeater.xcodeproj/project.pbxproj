@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D601E52E1BB9294F0016031B /* LSRepeater.h in Headers */ = {isa = PBXBuildFile; fileRef = D601E52D1BB9294F0016031B /* LSRepeater.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D601E5361BB92F3A0016031B /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601E5351BB92F3A0016031B /* Repeater.swift */; settings = {ASSET_TAGS = (); }; };
+		D601E5361BB92F3A0016031B /* LSRepeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601E5351BB92F3A0016031B /* LSRepeater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D601E52A1BB9294F0016031B /* LSRepeater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LSRepeater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D601E52D1BB9294F0016031B /* LSRepeater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSRepeater.h; sourceTree = "<group>"; };
 		D601E52F1BB9294F0016031B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D601E5351BB92F3A0016031B /* Repeater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repeater.swift; sourceTree = "<group>"; };
+		D601E5351BB92F3A0016031B /* LSRepeater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSRepeater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 		D601E52C1BB9294F0016031B /* LSRepeater */ = {
 			isa = PBXGroup;
 			children = (
-				D601E5351BB92F3A0016031B /* Repeater.swift */,
+				D601E5351BB92F3A0016031B /* LSRepeater.swift */,
 				D601E52D1BB9294F0016031B /* LSRepeater.h */,
 				D601E52F1BB9294F0016031B /* Info.plist */,
 			);
@@ -134,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D601E5361BB92F3A0016031B /* Repeater.swift in Sources */,
+				D601E5361BB92F3A0016031B /* LSRepeater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +284,7 @@
 				D601E5341BB9294F0016031B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
