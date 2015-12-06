@@ -28,7 +28,7 @@ public class LSRepeater: NSObject {
         return repeater
     }
     
-    func invalidate()
+    public func invalidate()
     {
         self.timer.invalidate()
     }
