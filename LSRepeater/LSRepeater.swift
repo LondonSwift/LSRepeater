@@ -28,6 +28,11 @@ public class LSRepeater: NSObject {
         return repeater
     }
     
+    deinit
+    {
+        self.timer.invalidate()
+    }
+    
     func timerDidFire() {
         self.execute()
     }
