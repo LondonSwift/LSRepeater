@@ -22,7 +22,7 @@ public class LSRepeater: NSObject {
         let repeater = LSRepeater()
         repeater.execute = execute
         
-        repeater.timer = NSTimer.scheduledTimerWithTimeInterval(interval, target:repeater, selector: Selector("timerDidFire"), userInfo: nil, repeats: true)
+        repeater.timer = NSTimer.scheduledTimerWithTimeInterval(interval, target:repeater, selector: #selector(LSRepeater.timerDidFire), userInfo: nil, repeats: true)
         
         if fireOnceInstantly {
             repeater.timerDidFire()
