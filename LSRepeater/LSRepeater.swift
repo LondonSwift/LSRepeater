@@ -11,18 +11,18 @@ import Foundation
 public typealias LSRepeatClosure = () -> Void
 
 // we need to subclass NSObject, as NSTimer uses the runtime for method invocation
-public class LSRepeater: NSObject {
+open class LSRepeater: NSObject {
     
-    var timer:NSTimer!
+    var timer:Timer!
     var execute:LSRepeatClosure!
     
     
-    public class func repeater(interval:NSTimeInterval, fireOnceInstantly:Bool, execute: LSRepeatClosure) -> LSRepeater {
+    open class func repeater(_ interval:TimeInterval, fireOnceInstantly:Bool, execute: @escaping LSRepeatClosure) -> LSRepeater {
         
         let repeater = LSRepeater()
         repeater.execute = execute
         
-        repeater.timer = NSTimer.scheduledTimerWithTimeInterval(interval, target:repeater, selector: #selector(LSRepeater.timerDidFire), userInfo: nil, repeats: true)
+        repeater.timer = Timer.scheduledTimer(timeInterval: interval, target:repeater, selector: #selector(LSRepeater.timerDidFire), userInfo: nil, repeats: true)
         
         if fireOnceInstantly {
             repeater.timerDidFire()
@@ -31,11 +31,11 @@ public class LSRepeater: NSObject {
         return repeater
     }
     
-    public class func repeater(interval:NSTimeInterval, execute: LSRepeatClosure) -> LSRepeater {
+    open class func repeater(_ interval:TimeInterval, execute: @escaping LSRepeatClosure) -> LSRepeater {
         return self.repeater(interval, fireOnceInstantly: true, execute: execute)
     }
     
-    public func invalidate()
+    open func invalidate()
     {
         self.timer.invalidate()
     }
